@@ -34,4 +34,7 @@ print("the type of a is:", type(b))  # to print type of data like: string, integ
 print("the type of a is:", type(c))
 print(d)
 print("the type of a is:", type(d))
+<<<<<<< HEAD
 
+=======
+>>>>>>> c34ed0b95dcc94bd28f6702580ef1496045e1ca7
