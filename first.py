@@ -30,7 +30,7 @@ b="name" # these are variables
 c=1.1 
 d= complex(2,3)    # this is to write a complex no.
 print(type(a))
-print("the type of a is:", type(b))  # o print type of data like: string, integer, boolean, float, complex etc
+print("the type of a is:", type(b))  # to print type of data like: string, integer, boolean, float, complex etc
 print("the type of a is:", type(c))
 print(d)
 print("the type of a is:", type(d))
