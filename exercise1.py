@@ -41,5 +41,33 @@ print("My name is", x+y)
 # x-y, x*y, x/y
 # This will not work on string and shows error
 
+name="harry"
+frnd_name="raghav"
+print("hey!, my name is " +name + " and my friend's name is " +frnd_name +".")
+# can use a colon(,) or addition symbol(+) as well.
+
+line= """hey! myself an enthusiastic tech learner.
+currently, i'm learning python.
+what about you?"""   # To print multiple line statement, can you ("""") or ('''). By this you can avoid error of EOL while scanning string literal.
+print(line)
+# string is like an array of characters(not exact) as indexing is done.
+name="harry"
+print(name[0])
+print(name[1])
+print(name[2])
+print(name[3])
+print(name[4])
+# print(name[5])  will gives an error: string index out of range.
+print("Let's print using a foor loop\n")
+for character in name:
+     print(character) # Helps to printeach character of complex strings without indexing separately.
+
+import lorem
+st=lorem.paragraph()   # here, lorem is used to create some random text. 
+print(st)                          # for which firstly, lorem library is imported.
+for char in st:
+     print(char)
+
+
 
 
