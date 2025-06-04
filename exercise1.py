@@ -120,6 +120,116 @@ print(fruit[0:2])
 name="Harry"
 print(name[-4:-2])  # output : ar as: length=5 so, we have; [5-4:5-2] =[1:3]= 1 included and 3 is excluded.
 
+# strings:
+# Strings are immutable
+# A set of build-in methods are provided used to alter and modify.
+# These methods won't change string but apply operations and make a new string( as like copy of the string).
+string= "Teesha"
+print(len(string))
+print(string.upper())
+
+# or can call a function in different ways:
+# 1. You did call the method on this line and then print the value.
+text="Hello"
+method_ref = text.upper()  # <- the () here calls the method 
+print(method_ref)  # This just prints the string "HELLO"
+
+# 2.  If you want to store the method itself (not the result):
+text = "hello"
+
+# Store the method itself (not called yet)
+method_ref = text.upper  # no ()
+
+# Now call the stored method
+print(method_ref())  # Output: HELLO
+# lower
+string1="HARRY"
+print(string1.lower())
+
+#rstrip(): removes any trailing characters (i.e. characters at end)
+string2="Hello!!!"
+print(string2.rstrip("!"))   # output: Hello
+string3="!Hello!7abc!8!"
+print(string3.rstrip("!"))   # output: !Hello!7abc!8
+
+# replace(): it replaces all occurances of a string with another string.
+string4=" He is john . John is my good friend. John is a good boy."
+print(string4.replace("John", "harry")) # replaces all occuarnces but he is joh is not replaced, as python is case sensitive.
+
+string4=" He is John. John is my good friend. John is a good boy."
+print(string4.replace("John", "Harry"))
+
+# split():  splits the given string at a specified instance and returns the separatee strings as list items .
+string5="apple banana  mango 23 wow! 56.3 true" 
+print(string5.split())   # can hold int, char, symbols and all datav types
+
+# capitalize() : turns first character of string to upper case and all the rest in lower case.
+string6="introducioon to pytHon"  
+capit=string6.capitalize()    # if there's no change then won't show any error.
+print(capit)     # i turns to I and rest in lower case (H turns to h) 
+ 
+# center(): aligns the string to the center as per parameters given b y the user.
+string7="Welcome"
+print(string7.center(51))  
+print(string7.center(90))  
+print(len(string7.center(50))) 
+# logic:
+''' string7.center(50)
+You're centering "Welcome" in a space of 50 characters.
+
+So:
+
+Total space = 50
+
+Text = 7
+
+Spaces = 50 - 7 = 43
+
+Half on left, half on right → about 21 on left, 22 on right ( Python adds extra space to the right if it's odd.)
+
+Output: " Welcome "
+
+Length: 50'''
+
+print(len(string7.center(10)))
+
+''' len(string7.center(10))
+Total = 10
+
+10 - 7 = 3 spaces → 1 on left, 2 on right (Python adds extra space to the right if it's odd)
+
+Output: " Welcome "
+Length: 10 '''
+# for more detail, print table and go through it.
+
+from tabulate import tabulate
+# Define table data as a list of lists (like rows)
+data = [
+    ["Even", "Even/Odd", "Even", "equal", "equal", "—"],
+    ["Odd",  "Even/Odd", "Odd",  "<", ">", "✅ Right side"]
+]# Define column headers
+headers = ["Total width", "Text length", "Extra spaces", "Left", "Right", "Extra space goes to..."]
+
+# Print the table
+print(tabulate(data, headers=headers, tablefmt="github"))
+
+# count() : returns the no. of times the given value has occured within the given string.
+string8="AbhfgAnnaaii"
+print(string8.count("A"))  # py is case sensitive so dont count small character(a).
+
+# endswith(): checks if the strings end with a gtiven value. If yes, then  rerturn True else return False.
+# returns boolean data type
+string9="welcome to the console!!"
+print(string9.endswith("!!"))   # true
+print(string9.endswith("!!!"))   # false
+
+# we can also check for a value in between the string by providing start and end index  positions.
+print(string9.endswith("con",4,18))
+
+
+
+
+
 
 
 
