@@ -27,7 +27,7 @@ x=input("enter your name/number:" )   #concatinates as take string value by defa
 y=input("enter your name/number:" )
 print("My name is", x+y)
  
-p=int(input("enter first name:" ))   #type casting is dont to make it an int value separately
+p=int(input("enter first name:" ))   #type casting is don't to make it an int value separately
 q=int(input("enter second name:" ))
 print("the sum of two numbers is:", p+q)
 
@@ -45,6 +45,7 @@ name="harry"
 frnd_name="raghav"
 print("hey!, my name is " +name + " and my friend's name is " +frnd_name +".")
 # can use a colon(,) or addition symbol(+) as well.
+# it can't combines a string and an integer together.
 
 line= """hey! myself an enthusiastic tech learner.
 currently, i'm learning python.
@@ -67,6 +68,43 @@ st=lorem.paragraph()   # here, lorem is used to create some random text.
 print(st)                          # for which firstly, lorem library is imported.
 for char in st:
      print(char)
+#indexing
+print(name[0:4])  # while indexing, index starts from zero(0), includes starting index & excludes the ending index.
+name1="Harry, Shubham"
+print(name1[0:9])  # spaces are also counted. as shows output: Harry, Sh
+name2="Harry,Shubham"   
+print(name2[0:9])# output is Harry,Shu 
+# to find length of a string
+print(len(name1)) # output: 14 
+print(len(name2)) # output: 13       # counts space
+fruit="Mango"
+print("fruit is of ", len(fruit), "word length") # or can create a separate variable also to print.
+'''length=len(fruit)                                 # it will gives an error.
+print("the length of fruit is" {length} + "yes" )''' 
+# Here '+'  will not workout as it adds or combine only strings together.
+#  Hence can use a formatted string literals (i.e f-string) for instance:
+new_name="Rahul" 
+age=20
+print(f" My name is {new_name} and I am {age} years old. ")
+fruit1 = "apple"
+length = 5   # int value
+print(f"The length of {fruit1} is {length}") # converted int value in a str value.
+# QUICK TIP : 
+'''Use f"..." if you're using {} to insert variables.  
+ Don't mix + with {}  
+AS LIKE: 
+                f"Hello, {name}" → f-string
+                "Hello, {name}" → just a regular string, no formatting '''
+# Now, how (if 5 be a number) can be taken as a string?
+a = 5
+b = 3          # a and b are numbers (int).
+print(f"{a} + {b} = {a + b}")   # But you’re using them inside a string.
+
+# Same thing in old way
+a = 5
+print("Value is " + str(a))  #  Manual conversion  # can use str(a) also.
+
+
 
 
 
