@@ -68,12 +68,15 @@ st=lorem.paragraph()   # here, lorem is used to create some random text.
 print(st)                          # for which firstly, lorem library is imported.
 for char in st:
      print(char)
-#indexing
+
+#indexing & slicing 
+
 print(name[0:4])  # while indexing, index starts from zero(0), includes starting index & excludes the ending index.
 name1="Harry, Shubham"
 print(name1[0:9])  # spaces are also counted. as shows output: Harry, Sh
 name2="Harry,Shubham"   
 print(name2[0:9])# output is Harry,Shu 
+
 # to find length of a string
 print(len(name1)) # output: 14 
 print(len(name2)) # output: 13       # counts space
@@ -103,6 +106,20 @@ print(f"{a} + {b} = {a + b}")   # But you’re using them inside a string.
 # Same thing in old way
 a = 5
 print("Value is " + str(a))  #  Manual conversion  # can use str(a) also.
+# negative indexing
+fruit="Mango"
+print(fruit[0:4])    #output: Mang
+print(fruit[:4]) # will take zero(0) by default    # output: Mang
+print(fruit[0:-2])  # output: Man  # here, it is taken as [0: len(fruit)-3] as:
+print(fruit[0:len(fruit)-2])   # output: Man
+print(fruit[-1:-2]) # here it wont show anything. neither output nor an error as it works but doesn't makes any sense.
+print(fruit[0:2])
+
+# QUICK QUESTION:
+# If name is Harry, then find result after slicing from [-4 to -2] 
+name="Harry"
+print(name[-4:-2])  # output : ar as: length=5 so, we have; [5-4:5-2] =[1:3]= 1 included and 3 is excluded.
+
 
 
 
