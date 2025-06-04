@@ -226,13 +226,111 @@ print(string9.endswith("!!!"))   # false
 # we can also check for a value in between the string by providing start and end index  positions.
 print(string9.endswith("con",4,18))
 
+# find(): this method searches for the first occurrence of a specified value and returns the index of that value where it's  present. If not found, it returns -1.
+string10="Hello, welcome to the world of Python programming."
+print(string10.find("Python"))
+string11="He's Rahul. He is an honest person."
+print(string11.find("is"))
+print(string11.find("host"))   # If the value is not found, it returns -1 instead of showing error.
+# index(): if want that program will exit or stop by giving an error if the value is not found, then can use::
+print(string11.index("host"))
 
+#isalnum(): checks if all characters in the string are alphanumeric (i.e., letters and numbers that are A to Z, a to z, 0 to 9) and returns True if they are, otherwise returns False (if any other char or punctuation is present).
+string12="welcomeToTheConsole123" 
+print(string12.isalnum())
+string13="welcome to the console" 
+print(string13.isalnum())  # False, as it contains spaces.
 
+#isalpha(): returns true only if entire string consists of alphbets(i.e. A to Z, a to z) and no other characters. If contains any other character , punctuation or numbers( 0 to 9) then returns False.
+string14="welcomeToTheConsole123"
+print(string14.isalpha())  # False, as it contains numbers.
 
+# islower(): returns True if all characters in the string are lowercase (i.e., a to z) and there is at least one character, otherwise returns False.
+string15="welcome to the console"
+print(string15.islower())  # True, as all characters are in lower case
+string15=""
+print(string15.islower())  # fFalse, as there is no character in the string.
 
+# isupper(): returns True if all characters in the string are uppercase (i.e., A to Z) and there is at least one character, otherwise returns False.
+string16="WELCOME TO THE CONSOLE"
+# print(string16.isupper())  # True, as all characters are in upper case
+# string17="welcome to the console 23"
+# print(string17.isupper()) # False, as it contains lower case characters and numbers
 
+# # isdigit(): returns True if all characters in the string are digits (i.e., 0 to 9) and there is at least one character, otherwise returns False.
+string18="1234567890"
+print(string18.isdigit())  # True, as all characters are digits.
+string19=""
+print(string19.isdigit())  # False, as there is no character in the string.
 
+#isprintable(): returns True if all characters in the string are printable (i.e., letters, numbers, punctuation, and whitespace) 
+string20="Hello, World! 123"  
+print(string20.isprintable())  # True, as all characters are printable.
+string21="" # empty string is considered printable.
+print(string21.isprintable())  
 
+string22="hello\n"  # contains a newline character, which is not printable.
+print(string22.isprintable())  # False, non-printable character.
 
+string23=""
+print(string23.isprintable())  # False, as there is no character in the string.
 
+# isspace(): returns True if all characters in the string are whitespace characters (i.e., spaces, tabs, newlines) and there is at least one character, otherwise returns False.
+string24="   "  # contains only spaces
+print(string24.isspace())  # True, as all characters are spaces.
 
+string25="\t\n"  # contains a tab and a newline character
+print(string25.isspace())  # True, as all characters are whitespace.
+
+#isnumeric(): returns True if all characters in the string are numeric characters (i.e., digits and decimal points) and there is at least one character, otherwise returns False.
+string26="123456"  # contains digits and a decimal point
+print(string26.isnumeric()) # True, as all characters are numeric.
+string27="243.56"  # contains a decimal point
+print(string27.isnumeric())  # False, as it contains a decimal point.
+string28="2/6" # contains a fraction
+print(string28.isnumeric())  # False, as it contains a fraction.
+string29="" 
+print(string29.isnumeric())   # False, as there is no character in the string
+
+# isidentifier(): checks whether a string is a valid identifier (i.e., a name you can legally use for variables, functions, classes, etc.)
+''' A valid identifier:
+
+Starts with a letter (a–z, A–Z) or an underscore (_)
+
+Can be followed by letters, digits (0–9), or underscores
+
+Cannot be a Python keyword (but isidentifier() won’t check that — keyword.iskeyword() can)'''
+
+string30="my_variable"  # valid identifier
+print(string30.isidentifier())  # True, as it follows the rules for identifiers.
+string31="first-name"   # invalid identifier, as it contains a hyphen (-)
+print(string31.isidentifier())
+string32="2nd_variable"  # invalid identifier, as it starts with a digit.
+print(string32.isidentifier())  # False, as it starts with a digit.
+string33="my variable"  # invalid identifier, as it contains a space.
+print(string33.isidentifier())  # False, as it contains a space.
+
+#isdecimal(): checks whether all characters in a string are decimal digits.
+#Also includes some Unicode decimal characters (like Arabic-Indic digits like ' ٠١٢٣  ')
+''' 
+'123'.isdecimal()         # True
+'٠١٢٣'.isdecimal()        # True (Arabic-Indic digits)
+'3.14'.isdecimal()        # False (decimal point is not allowed)
+'-42'.isdecimal()         # False (negative sign not allowed)
+'½'.isdecimal()           # False (fraction)
+'abc123'.isdecimal()      # False (contains letters)
+''.isdecimal()            # False (empty string) '''
+
+string34="545.77"
+print(string34.isdecimal())
+
+''' decimal digits refer to individual characters that are 0 through 9, like: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+and deciamls numbers are like 3.14, 2.5, 0.99, etc.'''
+
+#istitle(): returns True if the first letter of each word of the string is capitalized and the rest are in lowercase, otherwise returns False.
+string35="Hello World"  # each word starts with a capital letter and rest are in lowercase.
+print(string35.istitle())  
+string36="Hello world"  # first word starts with a capital letter but second word is in lowercase.
+print(string36.istitle())  # False, as second word is in lowercase.
+string37=" To Kill a Mockingbird"  # False, as a is not capitalized.
+print(string37.istitle())  
