@@ -233,7 +233,7 @@ string11="He's Rahul. He is an honest person."
 print(string11.find("is"))
 print(string11.find("host"))   # If the value is not found, it returns -1 instead of showing error.
 # index(): if want that program will exit or stop by giving an error if the value is not found, then can use::
-print(string11.index("host"))
+# print(string11.index("host"))
 
 #isalnum(): checks if all characters in the string are alphanumeric (i.e., letters and numbers that are A to Z, a to z, 0 to 9) and returns True if they are, otherwise returns False (if any other char or punctuation is present).
 string12="welcomeToTheConsole123" 
@@ -334,3 +334,15 @@ string36="Hello world"  # first word starts with a capital letter but second wor
 print(string36.istitle())  # False, as second word is in lowercase.
 string37=" To Kill a Mockingbird"  # False, as a is not capitalized.
 print(string37.istitle())  
+
+#startswith(): checks if the string starts with a specified value and returns True if it does, otherwise returns False.
+string38="Hello, World!"  
+print(string38.startswith("hello"))  # True, as the string starts with "Hello".
+
+# swapcase(): returns a new string with all uppercase characters converted to lowercase and all lowercase characters converted to uppercase.
+string39="Hello, World!"
+print(string39.swapcase())  # output: hELLO, wORLD!
+
+# title(): returns a new string with the first letter of each word capitalized and the rest in lowercase.
+string40="His name is Rohan. he is a honest man."
+print(string40.title())  # capitalized every first letter of each word and rest in lowercase.
