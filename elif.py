@@ -57,4 +57,16 @@ elif side1 == side2 or side2 == side3 or side1 == side3:
     print("The triangle is isosceles.")
 else:
     print("The triangle is scalene.")
-    
+
+'''Write a program to check the type of number entered by the user. If the number is even, then it is an even number.
+If the number is odd, then it is an odd number. If the number is zero, then it is zero.'''
+
+number = int(input("Enter a number: "))
+if number == 0:
+    print("The number is zero.")  # to check no. as zero
+
+elif number % 2 == 0: # to check even no.
+    print("The number is even.")
+
+else:
+    print("The number is odd.") # to print odd no.
