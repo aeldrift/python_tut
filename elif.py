@@ -70,3 +70,18 @@ elif number % 2 == 0: # to check even no.
 
 else:
     print("The number is odd.") # to print odd no.
+
+'''Write a progrmam to check the type of character entered by the user. If the character is a vowel,consonant or digit.
+and if the character is a special character, then it is a special character.'''
+
+char = input("Enter a character: ")
+if char.isdigit():
+    print("The character is a digit.")
+elif char.lower() in 'aeiou':
+    print("The character is a vowel.")
+elif char.isalpha():
+    print("The character is a consonant.")
+else:
+   print("The character is a special character.")
+
+   
