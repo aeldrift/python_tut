@@ -1,7 +1,3 @@
-# elif statement:  sometimes we need to check multiple conditions.
-#In such cases, we can use elif statement. elif is short for else if. It is used to check multiple conditions in a single if-else statement.
-
-
 # understanding time concept 
 
 import time
@@ -40,6 +36,36 @@ for i in range(5):   #This program prints "Tick 1" to "Tick 5", with a 0.5 secon
     time.sleep(0.5)  
 
 # program:
+''' Writ a program to greet user according to the time of the day.'''
+
+import time
+current_time=time.localtime()
+current_hour= current_time.tm_hour  # import time has a time model which further 
+if (current_hour<12):               # has struct_time object which includes all year, hour, day etc. 
+    print("Good Morning!")
+elif (current_hour<17):
+    print("Good Afternoon!")
+elif(current_hour<20):
+    print("Good evening!")
+else:
+    print("good night!")
+
+# modified version of the above user greeting program
+
+name=input("Enter user name:")
+import time
+current_time=time.localtime()
+current_hour=current_time.tm_hour
+if  current_hour<12:
+    print("Good Morning!",name)
+elif current_hour<17:
+    print("Good Afternoon!",name)
+elif current_hour<20:
+    print("Good Evening!",name)
+else:
+    print("Good Night!",name)
+    
+
 
 
 
