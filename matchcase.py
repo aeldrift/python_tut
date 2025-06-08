@@ -23,12 +23,12 @@ The matchcase consists of three main entities:
 2. one or more case clause: These are the clauses that contain the patterns to be matched and executed.
 3. default clause(expression for each case): This is the clause that is executed if none of the patterns match.'''
  # example:
- 
+
 x=int(input(" Enter a number"))
 # x is a variable to match.
 match x:
-    case 0:        # This is the first case clause, executed only if x=0
-        print("You entered zero")
+    case 0:        # This is the first case clause
+        print("You entered zero") # executed only if x=0
     case 1:
         print("You entered one")
     case 4:
