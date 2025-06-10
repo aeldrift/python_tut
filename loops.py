@@ -62,3 +62,10 @@ for i in range(10):
         print("Breaking the loop at i =", i)
         break  # exit the loop when i is 5
     print(i)
+
+# Using continue statement to skip the current iteration:
+for i in range(10):
+    if i == 5:
+        print("Skipping the iteration at i =", i)
+        continue  # skip the rest of the loop when i is 5
+    print(i)
