@@ -36,9 +36,18 @@ for k in range(20001):
 for k in range(0, 20, 2):  # start at 0, end at 20, step by 2
     print(k)
 
+# Write a program to print the first 10 odd numbers:
+
+for k in range(1, 20, 2):  # start at 1, end at 20, step by 2
+    print(k)
+
+# While loop: used to execute a block of code repeatedly as long as a given condition is true.
     
-
-
+# Example:
+count = 0
+while count < 5:
+    print("Count is:", count)
+    count += 1  # increment count by 1
 
         
 
