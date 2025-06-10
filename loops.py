@@ -31,6 +31,11 @@ for k in range(1,6):  # now, the value is specified, so no need to add +1 (i.e. 
 # example:
 for k in range(20001):
     print(k)
+
+# Write a program to print the first 10 even numbers:
+for k in range(0, 20, 2):  # start at 0, end at 20, step by 2
+    print(k)
+
     
 
 
