@@ -48,7 +48,17 @@ count = 0
 while count < 5:
     print("Count is:", count)
     count += 1  # increment count by 1
+# Note: If the condition is never false, the loop will run indefinitely (infinite loop).
 
-        
+# Example of infinite loop (uncomment to run):
+# count = 0
+# while count < 5:
+#     print("Count is:", count)
+#     count += 1  # This will never make count >= 5, so it will run forever.
 
-
+# Using break statement to exit a loop:
+for i in range(10):
+    if i == 5:
+        print("Breaking the loop at i =", i)
+        break  # exit the loop when i is 5
+    print(i)
