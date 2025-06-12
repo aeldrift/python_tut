@@ -82,3 +82,13 @@ c=2
 d=6
 isgreater(c,d)
 calgmean(c,d)
+
+#  Write a program to greet user using function:
+
+# Define the function
+def greet_user(name):
+    print("Hello, " + name + "! Welcome to the program.")
+
+# Main part of the program
+user_name = input("Enter your name: ")
+greet_user(user_name)
