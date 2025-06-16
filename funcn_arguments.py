@@ -35,3 +35,13 @@ def average(*numbers):
         sum=sum+i
     print("average is:", sum/len(numbers))
 average(2, 4, 6, 8, 10)  # passing variable-length arguments
+
+''' Return statement: is used to return a value of the expression back to the calling function. If no return statement is present, the function returns None by default.'''
+# example: 1
+def average(*numbers):
+    sum=0
+    for i innumbers:
+    sum=sum+i
+    return sum/len(numbers)  # returning the average value
+result=average(2,4,6,8,10)
+print(result)  # printing the returned value
