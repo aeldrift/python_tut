@@ -29,6 +29,7 @@ name("john", "kumar")
 '''4. Variable-length arguments: is used when have to pass more arguments than those defined in actual function definition.'''
 # example: 1
 def average(*numbers):
+    print(type(numbers))  # checking the type of variable-length arguments
     sum=0
     for i in numbers:
         sum=sum+i
