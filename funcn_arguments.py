@@ -40,8 +40,8 @@ average(2, 4, 6, 8, 10)  # passing variable-length arguments
 # example: 1
 def average(*numbers):
     sum=0
-    for i innumbers:
-    sum=sum+i
+    for i in numbers:
+     sum=sum +i
     return sum/len(numbers)  # returning the average value
 result=average(2,4,6,8,10)
 print(result)  # printing the returned value
