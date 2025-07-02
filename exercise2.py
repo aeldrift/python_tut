@@ -21,7 +21,7 @@ c_time=time.time()
 print("current time since epoch \(in sec\ is:")
 print(c_time)
 
-# To pause program for a few spoecified seconds like
+# To pause program for a few specified seconds like
  # time.sleep(5) will pauses yhe program for 5 sec after printing play1
 import time 
 print("play1")
