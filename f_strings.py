@@ -19,3 +19,9 @@ name= "teesha"
 #But to avoid mistakes, use like this:
 print(f"My name is {name} and I am from {country}.")
 
+# Example:3
+animal= input(str("Enter your pet name:"))
+years= input(str("Enter the number of years you have been taking care of your pet:"))
+txt= f"I have {animal} as a pet and take good care of it since {years} years."
+print(txt)
+
