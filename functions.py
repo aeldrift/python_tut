@@ -131,3 +131,14 @@ def calfact(n):
         print(fact)
 calfact(5)  # function is called
 calfact(6)
+
+
+#WRF to convert amount from USD to INR.
+
+# usd_amount= float(input("Enter amount in USD:"))
+# exchange_rate= float(input("Enter current exchange rate for USD to INR:"))
+
+def amount(usd_amount, exchange_rate):
+    inr_amount=usd_amount*exchange_rate
+    return inr_amount
+print("amount in INR is:", amount(20,10))
