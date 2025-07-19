@@ -129,6 +129,5 @@ def calfact(n):
     for i in range(1,n+1):
         fact*=i
         print(fact)
-
-calfact(5)
+calfact(5)  # function is called
 calfact(6)
