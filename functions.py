@@ -142,3 +142,14 @@ def amount(usd_amount, exchange_rate):
     inr_amount=usd_amount*exchange_rate
     return inr_amount
 print("amount in INR is:", amount(20,10))
+
+# WAF to as no inputed by user is odd oe even. retur a string as odd or even as per result.
+
+def check_no(number):
+    if number %2==0:
+        return "even"
+    else:
+        return "odd"
+num= int(input("Enter a number:",))
+result=check_no(num)
+print(result)
