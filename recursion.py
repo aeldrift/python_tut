@@ -26,3 +26,11 @@ def show(n):
     print(n)
     show(n-1)
 show(5)
+
+# Write a recursive function to calculate the sum of first n natural numbers.
+def sum(n):
+    if n==0:
+        return 0  # 0 is returened as if only return will none implicity which breaks recursion when none is added to int value.
+    else:
+        return n+sum(n-1)
+print("the sum of n natural nos. is:", sum(5)) 
