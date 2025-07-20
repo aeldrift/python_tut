@@ -41,3 +41,13 @@ def sum(n):
         return 0
     return n+sum(n-1)
 print("the sum of n natural nos. is:", sum(5))
+
+# Write a recursive function to print the elements of a list.
+
+def print_list(list,idx=0):
+    if idx==len(list):
+        return
+    print(list[idx])
+    print_list(list, idx + 1)
+fruits=["apple", "mango","banana", "litchi", "guava"]
+print_list(fruits)
