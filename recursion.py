@@ -34,3 +34,10 @@ def sum(n):
     else:
         return n+sum(n-1)
 print("the sum of n natural nos. is:", sum(5)) 
+
+# OR CAN ALSO WRITE AS:
+def sum(n):
+    if n==0:
+        return 0
+    return n+sum(n-1)
+print("the sum of n natural nos. is:", sum(5))
