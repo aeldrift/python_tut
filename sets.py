@@ -16,14 +16,21 @@ name_set=set()
 print(name_set)  # empty set
 print(type(name_set))  # <class 'set'>
 
-cities= {"Delhi", "Mumbai", "Kolkata", "Chennai"}
+cities= {"Delhi", "Mumbai", "Kolkata", "Chennai", "usa"}
 cities2= {"Delhi", "seoul","Madrid", "Kolkata", "Chennai"}
 # cities.add("Bangalore")  # adding an element
 # print("cities after adding Bangalore:", cities)
 cities3=cities.union(cities2)
 print(cities3)
+
+cities4=cities.symmetric_difference(cities2)
+print("symmetric difference of cities4 is:", cities4)  # elements in cities2 but not in cities
+
+cities4=cities.difference(cities2)
+print("difference of cities4 is:", cities4)  # elements in cities but not in cities2
+
 print(cities) # remains unchanged
-cities.update(cities2)
+# cities.update(cities2)
 print(cities)  # cities is updated with elements from cities2
 
 # intersection case
@@ -34,3 +41,6 @@ print("juice3 is:",juice3)
 print("juice set\(when not updated) is:", juice) # remains unchanged  
 juice.intersection_update(juice2)
 print("when juice set updated:", juice)
+
+
+
