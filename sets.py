@@ -4,7 +4,7 @@
 
 # Example of creating a set
 my_set = {1, 2, 3, 4,2, 5}  # duplicates are ignored
-print("my set:",my_set)
+print("my set:",my_set)  # order can change while printing output.
 
 info= {"john", 19, "USA", 19.5, True,19}  # mixed data types
 print("info set:", info)
