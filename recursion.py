@@ -17,4 +17,12 @@ print(fib(3))
 print(fib(0))
 print(fib(4))
 print(fib(5))
-    
+
+# Recursion: A function that calls itself repeatedly until a base condition is met.
+# WAP to print numbers from 5 to 1 using recursioin.
+def show(n):
+    if n==0:
+        return
+    print(n)
+    show(n-1)
+show(5)
