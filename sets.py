@@ -47,6 +47,39 @@ cities={"Tokyo","Madrid","Berlin","Delhi"}
 cities2={"Seoul","Kabul"}
 cities.update(cities2)
 print(cities)
+<<<<<<< HEAD
+=======
+
+cities.discard("tokyo")
+print(cities)
+print("hello world3!")
+
+cities.clear()
+print(cities)
+info={"carla",19,"harry",19.7,True}
+
+# to check if an item exists or not
+if "carla" in info:
+    print("carla is  present")
+else:
+    print("carla is absent") 
+# # item=cities.pop()
+# print(cities)          # AS IT SHOWS ERROR SO IS COMMENT OUT HERE.
+# print("popped item is:", item)
+
+x = {"apple", "banana", "cherry","google", "microsoft", "facebook"}
+y = {"google", "microsoft", "facebook","apple"}
+
+z = x.isdisjoint(y)
+print(z)
+
+z = x.issuperset(y)
+print(z)
+
+z = x.issubset(y)
+print(z)
+
+>>>>>>> 9a2055321813c61ea9f4c297d2065883b8a6083c
 
 cities.discard("tokyo")
 print(cities)

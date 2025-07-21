@@ -41,4 +41,8 @@ while i<7:
   if i==4:
     break
 else:
+<<<<<<< HEAD
     print("sorry no i is there")
+=======
+    print("sorry no i is there")
+>>>>>>> 9a2055321813c61ea9f4c297d2065883b8a6083c
