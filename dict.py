@@ -25,6 +25,7 @@ print(ep1)  # {123: 89, 567: 69, 222: 67}
 
 # we can use else statement with for loop and while loop also.
 
+# cse: For loop
 for i in range(6):
   print(i)
   if i==4:    # If else executed then loop doesn't break. It exits sucessfully.
@@ -32,3 +33,12 @@ for i in range(6):
 else:
     print("sorry no i is there")   
 
+#case: While loop
+i=0
+while i<7:
+  print(i)
+  i=i+1
+  if i==4:
+    break
+else:
+    print("sorry no i is there")
