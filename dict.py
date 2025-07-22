@@ -19,3 +19,16 @@ print(ep1)  # {123: 89, 567: 69, 670: 69, 222: 67}
 del ep1[670]
 print(ep1)  # {123: 89, 567: 69, 222: 67}
 
+# Some important things to know:
+
+# SOME IMPORTANT THINGS TO KNOW:
+
+# we can use else statement with for loop and while loop also.
+
+for i in range(6):
+  print(i)
+  if i==4:    # If else executed then loop doesn't break. It exits sucessfully.
+    break
+else:
+    print("sorry no i is there")   
+
