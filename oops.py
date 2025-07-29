@@ -13,7 +13,11 @@ b= person()
 a.name ="Shubham"
 a.occupation="Accountant"
 
-a.name ="Nitika"
-a.occupation="HR"
-a.info()
-b.info()
+b.name ="Nitika"
+b.occupation="HR"
+a.info()  # Shubham is a Accountant
+b.info()  # Nitika is a HR
+
+
+    
+
