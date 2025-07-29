@@ -18,6 +18,8 @@ b.occupation="HR"
 a.info()  # Shubham is a Accountant
 b.info()  # Nitika is a HR
 
-
-    
-
+# Creating a constructor
+class person:
+    def __init__(self):
+        print("Hey! I am a person")
+a=person()  # Expected output: Hey! I am a person
