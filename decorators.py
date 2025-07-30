@@ -68,4 +68,9 @@ def log_function_call(func):
         logging.info(f'{func.__name__} returned {result}')
         return result
     return decorated
+@log_function_call
+def my_function(a, b):
+    return a + b
+
+
 
