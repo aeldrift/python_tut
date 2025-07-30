@@ -71,6 +71,8 @@ def log_function_call(func):
 @log_function_call
 def my_function(a, b):
     return a + b
-
+# Test the function
+result = my_function(5, 7)
+print("Final result:", result)
 
 
