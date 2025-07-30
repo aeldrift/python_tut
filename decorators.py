@@ -53,3 +53,12 @@ def hello():
 def add(a, b):
     print(a + b)
 add(2,3)
+
+# PY decorator using logging 
+
+import logging
+
+# Configure logging to display INFO level messages
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
