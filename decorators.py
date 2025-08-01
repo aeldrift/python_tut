@@ -35,6 +35,19 @@ he()
 the sum is:
 transaction completed'''
 
+# example: 
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("transaction initiated")
+        func(*args, **kwargs)
+        print ("transaction completed")
+    return wrapper 
+def hello(a=1,b=1):
+    print("the sum is:", a+b)
+    
+hello1= decorator(hello)
+hello1()
+
 # example:1
 def greet(func):
     def wrapper(*args, **kwargs):
