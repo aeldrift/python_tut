@@ -97,25 +97,31 @@ def add(a, b):
     print(a + b)
 add(2,3)
 
+# using logging: 
+import logging
+logging.basicConfig(level=logging.INFO)
+
+logging.info("This is an info message")
+
 # PY decorator using logging 
 
-import logging
+# import logging
 
-# Configure logging to display INFO level messages
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# # Configure logging to display INFO level messages
+# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def log_function_call(func):
-    def decorated(*args, **kwargs):
-        logging.info(f'Calling {func.__name__} with args={args}, kwargs={kwargs}')
-        result = func(*args, **kwargs)
-        logging.info(f'{func.__name__} returned {result}')
-        return result
-    return decorated
-@log_function_call
-def my_function(a, b):
-    return a + b
-# Test the function
-result = my_function(5, 7)
-print("Final result:", result)
+# def log_function_call(func):
+#     def decorated(*args, **kwargs):
+#         logging.info(f'Calling {func.__name__} with args={args}, kwargs={kwargs}')
+#         result = func(*args, **kwargs)
+#         logging.info(f'{func.__name__} returned {result}')
+#         return result
+#     return decorated
+# @log_function_call
+# def my_function(a, b):
+#     return a + b
+# # Test the function
+# result = my_function(5, 7)
+# print("Final result:", result)
 
 
