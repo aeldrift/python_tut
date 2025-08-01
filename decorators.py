@@ -17,6 +17,23 @@ def abc(*args):
     print("args is:", args)
 
 abc(1, 2, 3)   # args is: (1, 2, 3)
+# example: 
+def decorator(func):
+    def wrapper():
+        print("transaction initiated")
+        func()
+        print("transaction completed")
+    return wrapper
+
+def hello():
+    print("the sum is:")
+
+he = decorator(hello)
+he()         
+#output:
+''' transaction initiated
+the sum is:
+transaction completed'''
 
 # example:1
 def greet(func):
