@@ -103,25 +103,28 @@ logging.basicConfig(level=logging.INFO)
 
 logging.info("This is an info message")
 
-# PY decorator using logging 
 
-# import logging
+logging.basicConfig(level=logging.INFO)
 
-# # Configure logging to display INFO level messages
-# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Define the decorator
+def log_decorator(func):
+    def wrapper(*args, **kwargs):
+        logging.info(f"Calling function '{func.__name__}' with args={args} and kwargs={kwargs}")
+        result = func(*args, **kwargs)
+        logging.info(f"Function '{func.__name__}' finished and returned {result}")
+        return result
+    return wrapper
 
-# def log_function_call(func):
-#     def decorated(*args, **kwargs):
-#         logging.info(f'Calling {func.__name__} with args={args}, kwargs={kwargs}')
-#         result = func(*args, **kwargs)
-#         logging.info(f'{func.__name__} returned {result}')
-#         return result
-#     return decorated
-# @log_function_call
-# def my_function(a, b):
-#     return a + b
-# # Test the function
-# result = my_function(5, 7)
-# print("Final result:", result)
+@log_decorator
+def add(a, b):
+    return a + b
+
+@log_decorator
+def greet(name="World"):
+    return f"Hello, {name}!"
+
+# Call them
+add(2, 3)
+greet(name="Alice")
 
 
