@@ -48,6 +48,19 @@ def hello(a=1,b=1):
 hello1= decorator(hello)
 hello1()
 
+# example: also can use like this:
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("transaction initiated")
+        func(*args, **kwargs)
+        print ("transaction completed")
+    return wrapper 
+    
+@decorator
+def hello(a=1,b=1):
+    print("the sum is:", a+b)
+    
+hello()
 # example:1
 def greet(func):
     def wrapper(*args, **kwargs):
