@@ -75,4 +75,27 @@ def my_function(a, b):
 result = my_function(5, 7)
 print("Final result:", result)
 
+# Example: a simple logging decorator
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
+
+# Decorator that logs function calls
+def log_decorator(func):
+    def wrapper(*args, **kwargs):
+        logging.info(f"Function '{func.__name__}' called with arguments {args} and keyword arguments {kwargs}")
+        result = func(*args, **kwargs)
+        logging.info(f"Function '{func.__name__}' returned {result}")
+        return result
+    return wrapper
+
+# Example function using the decorator
+@log_decorator
+def add(a, b):
+    return a + b
+
+# Call the function
+add(5, 7)
+
 
