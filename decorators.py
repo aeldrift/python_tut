@@ -17,7 +17,50 @@ def abc(*args):
     print("args is:", args)
 
 abc(1, 2, 3)   # args is: (1, 2, 3)
+# example: 
+def decorator(func):
+    def wrapper():
+        print("transaction initiated")
+        func()
+        print("transaction completed")
+    return wrapper
 
+def hello():
+    print("the sum is:")
+
+he = decorator(hello)
+he()         
+#output:
+''' transaction initiated
+the sum is:
+transaction completed'''
+
+# example: 
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("transaction initiated")
+        func(*args, **kwargs)
+        print ("transaction completed")
+    return wrapper 
+def hello(a=1,b=1):
+    print("the sum is:", a+b)
+    
+hello1= decorator(hello)
+hello1()
+
+# example: also can use like this:
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("transaction initiated")
+        func(*args, **kwargs)
+        print ("transaction completed")
+    return wrapper 
+    
+@decorator
+def hello(a=1,b=1):
+    print("the sum is:", a+b)
+    
+hello()
 # example:1
 def greet(func):
     def wrapper(*args, **kwargs):
@@ -54,26 +97,35 @@ def add(a, b):
     print(a + b)
 add(2,3)
 
-# PY decorator using logging 
-
+# using logging: 
 import logging
+logging.basicConfig(level=logging.INFO)
 
-# Configure logging to display INFO level messages
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.info("This is an info message")
 
-def log_function_call(func):
-    def decorated(*args, **kwargs):
-        logging.info(f'Calling {func.__name__} with args={args}, kwargs={kwargs}')
+
+logging.basicConfig(level=logging.INFO)
+
+# Define the decorator
+def log_decorator(func):
+    def wrapper(*args, **kwargs):
+        logging.info(f"Calling function '{func.__name__}' with args={args} and kwargs={kwargs}")
         result = func(*args, **kwargs)
-        logging.info(f'{func.__name__} returned {result}')
+        logging.info(f"Function '{func.__name__}' finished and returned {result}")
         return result
-    return decorated
-@log_function_call
-def my_function(a, b):
+    return wrapper
+
+@log_decorator
+def add(a, b):
     return a + b
-# Test the function
-result = my_function(5, 7)
-print("Final result:", result)
+
+@log_decorator
+def greet(name="World"):
+    return f"Hello, {name}!"
+
+# Call them
+add(2, 3)
+greet(name="Alice")
 
 # Example: a simple logging decorator
 import logging
