@@ -150,4 +150,15 @@ def add(a, b):
 # Call the function
 add(5, 7)
 
-
+# practise questions:
+# Write a decorator called @my_decorator that prints "Before the function" before a function runs and "After the function" afterward.
+def my_decorator(func):
+    def wrapper():
+        print("Before the function")
+        func()
+        print("After the function")
+    return wrapper
+@my_decorator
+def hello():
+    print("Hello, i am a function")
+hello()
