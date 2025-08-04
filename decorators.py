@@ -178,4 +178,19 @@ def input():
 
 input() # expected ouptput: String in uppercase is: I AM A FUNCTION.
 
+# Write a decortor that prints the function name and arguments before executing it.
+
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print(f"Function name: {func.__name__}")
+        print("Arguments:", args, kwargs)
+        return func(*args, **kwargs)
+    return wrapper
+
+@my_decorator
+def greet(name, age=18):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("Alice", age=25)
+
 
