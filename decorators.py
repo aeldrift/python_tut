@@ -162,3 +162,20 @@ def my_decorator(func):
 def hello():
     print("Hello, i am a function")
 hello()
+
+# Write a decorator that modifies the return value of a function by converting it to uppercase.
+
+def deco(func):
+    def wrapper():
+        s = func()
+        print("String in uppercase is:", s.upper())
+        return s
+    return wrapper
+
+@deco
+def input():
+    return "i am a function."
+
+input() # expected ouptput: String in uppercase is: I AM A FUNCTION.
+
+
