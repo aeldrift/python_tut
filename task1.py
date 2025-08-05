@@ -74,3 +74,26 @@ discount_input = float(input("Enter discount percentage: "))  # Apply discount b
 book.apply_discount(discount_input)
 
 print(f"Final book details after applying discount:\nTitle: {book.title}\nAuthor: {book.author}\nPrice: {book.price}")  # Display final details after discount
+
+# EXPECTED OUTPUT:
+'''
+Enter book title: vg
+Enter book author: hbh
+Enter book price: h
+Invalid input. Please enter a valid price.
+Enter book price: i
+Invalid input. Please enter a valid price.
+Enter book price: k
+Invalid input. Please enter a valid price.
+Enter book price: 89
+Current book details:
+Title: vg
+Author: hbh
+Price: 89.0
+Enter discount percentage: 50
+Final book details after applying discount:
+Title: vg
+Author: hbh
+Price: 44.5 '''
+
+
