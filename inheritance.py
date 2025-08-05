@@ -61,8 +61,6 @@ result.introduce()
 
 # Practice Question:
 
-Question:
-
 ''' Write two classes:
 1️⃣ A base class Animal with:
 
