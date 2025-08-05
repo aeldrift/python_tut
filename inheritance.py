@@ -59,4 +59,43 @@ class Student(Person):
 result = Student()
 result.introduce()
 
+# Practice Question:
+
+Question:
+
+''' Write two classes:
+1️⃣ A base class Animal with:
+
+An __init__() method that takes name as a parameter and stores it as an attribute.
+
+A make_sound() method that prints "<name> makes a sound.".
+
+
+2️⃣ A derived class Dog that inherits from Animal with:
+
+An __init__() method that calls the parent’s __init__() (using super()) and also stores an extra attribute breed.
+
+A make_sound() method that overrides the parent’s method and prints "<name> barks.", but also calls the parent’s make_sound() first.
+
+
+Finally, create a Dog object with name "Buddy" and breed "Golden Retriever", and call make_sound() on it.'''
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        print(f"{self.name} makes sound")
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)       # call Animal's constructor with name
+        self.breed = breed           # initialize Dog-specific attribute
+
+    def make_sound(self):
+        print(f"{self.name} barks")
+
+cout = Dog("Buddy", "Golden Retriever")
+cout.make_sound() 
+ # expected output: Buddy barks
 
