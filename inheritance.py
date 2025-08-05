@@ -29,3 +29,22 @@ class Dog(Animal):
 
 d = Dog()
 d.make_sound()
+
+# Practice Question:
+
+''' Create a program with two classes:
+
+1. Class: Person
+
+Method: introduce()
+→ Prints: "Hello, I am a person."
+
+
+
+2. Class: Student (inherits from Person)
+
+Method: introduce()
+→ Use super() to call the parent class method first.
+→ Then print: "I am also a student." '''
+
+
