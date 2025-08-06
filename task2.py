@@ -26,3 +26,20 @@ Person constructor called
 Student constructor called
 Hello, I’m Aarav
 My student ID is SRM2025 '''
+
+class Father:
+    def skills(self):
+        print("Gardening and Carpentry")
+
+class Mother:
+    def hobbies(self):
+        print("Painting and Singing")
+
+class Child(Father, Mother):  # Inherits from both
+    def own_skill(self):
+        print("Python programming")
+
+c = Child()
+c.skills()     # From Father
+c.hobbies()    # From Mother
+c.own_skill()  # Own method
