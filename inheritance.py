@@ -217,5 +217,28 @@ my ID is abc123
 my department is sales
 I manage Delhi'''
 
+# HIERARCHICAL INHERITANCE
+
+# Example:
+class Parent:
+    def message(self):
+        print("Message from Parent")
+
+class ChildA(Parent):
+    def message_a(self):
+        print("Message from Child A")
+
+class ChildB(Parent):
+    def message_b(self):
+        print("Message from Child B")
+
+
+a = ChildA()
+a.message()      # From Parent
+a.message_a()    # From ChildA
+
+b = ChildB()
+b.message()      # From Parent
+b.message_b()    # From ChildB
 
 
