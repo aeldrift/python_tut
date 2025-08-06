@@ -137,3 +137,24 @@ c=car()
 c.type()
 c.count()
 c.brand()
+
+# MULTILEVEL INHERITANCE:
+
+# Example:
+
+class Grandparent:
+    def grandparent_method(self):
+        print("This is the Grandparent class.")
+
+class Parent(Grandparent):
+    def parent_method(self):
+        print("This is the Parent class.")
+
+class Child(Parent):
+    def child_method(self):
+        print("This is the Child class.")
+
+obj = Child()
+obj.grandparent_method() #Inherited from Grandparent
+obj.parent_method() # Inherited from Parent
+obj.child_method()  # Defined in Child
