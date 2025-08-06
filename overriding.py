@@ -11,3 +11,5 @@ class Child(Parent):
 
 c=Child()
 c.greet()  # This will call the Child's greet method
+           # expected output: Hello from Child
+           
