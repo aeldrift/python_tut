@@ -25,10 +25,12 @@ class Child1(Parent):
 class Child2(Parent):
     pass  #it tells p that do nothing here, just continue
 
-
-
 c1 = Child1()
 c2 = Child2()
 
 c1.show()   # Uses Child1's override
 c2.show()   # Uses Parent's method (no override is there)
+
+# expected output:
+'''Child1 class overrides Parent
+Parent class method '''
