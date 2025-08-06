@@ -21,3 +21,8 @@ a = BabyPuppy()
 a.hobbie()
 a.run()
 a.eat()
+
+# Expected output:
+''' The baby puppy loves playing
+the dog is running
+i am an animal'''
