@@ -211,6 +211,11 @@ c.display_employee()
 c.display_manager()
 c.display_senior_manager()
 
+# Expected output:
+'''I am Alice and i am 20 years old.
+my ID is abc123
+my department is sales
+I manage Delhi'''
 
 
 
