@@ -116,3 +116,17 @@ class Student(Person):
 
     def show_id(self):
         print(f"My ID is {self.student_id}")
+
+# MULTIPLE INHERITANCE:
+''' child class inherits from more than one parent.'''
+# example:
+
+
+
+
+
+
+
+
+
+
