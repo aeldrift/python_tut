@@ -97,3 +97,22 @@ cout = Dog("Buddy", "Golden Retriever")
 cout.make_sound() 
  # expected output: Buddy barks
 
+# SINGLE INHERITANCE
+
+# example:
+class Person:
+    def __init__(self, name):
+        self.name = name
+        print("Person constructor called")
+
+    def greet(self):
+        print(f"Hello, I am {self.name}")
+
+class Student(Person):
+    def __init__(self, name, student_id):
+        super().__init__(name)  # This runs Person's __init__
+        self.student_id = student_id
+        print("Student constructor called")
+
+    def show_id(self):
+        print(f"My ID is {self.student_id}")
