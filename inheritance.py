@@ -121,12 +121,19 @@ class Student(Person):
 ''' child class inherits from more than one parent.'''
 # example:
 
+class engine:
+  def type(self):
+    print("petrol engine")
+    
+class wheels:
+  def count(self):
+    print("4 wheels")
 
-
-
-
-
-
-
-
-
+class car(engine,wheels):
+  def brand(self):
+    print("Toyota")
+    
+c=car()
+c.type()
+c.count()
+c.brand()
