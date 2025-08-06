@@ -158,3 +158,59 @@ obj = Child()
 obj.grandparent_method() #Inherited from Grandparent
 obj.parent_method() # Inherited from Parent
 obj.child_method()  # Defined in Child
+
+# MULTILEVEL INHERITANCE
+
+# Example:
+
+'''Create a multilevel class hierarchy with the following structure: Class Details:
+Person: Attributes: name, age  Method: display_person()
+Employee (inherits from Person):  Attribute: employee_id    Method: display_employee()
+Manager (inherits from Employee):  Attribute: department    Method: display_manager()
+SeniorManager (inherits from Manager):  Attribute: region   Method: display_senior_manager() '''
+
+class Person: 
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        
+    def display_person(self):
+        print(f"I am {self.name} and i am {self.age} years old.")
+                
+                
+class Employee(Person): 
+    def __init__(self,name,age,employee_id):
+        super().__init__(name,age)
+        self.employee_id=employee_id
+       
+    def display_employee(self):
+        print(f"my ID is {self.employee_id}")
+                
+                
+class Manager(Employee): 
+    def __init__(self,name,age,employee_id,department):
+        super().__init__(name,age,employee_id)
+        self.department=department
+       
+    def display_manager(self):
+            print(f"my department is {self.department}")
+                
+                
+class SeniorManager(Manager): 
+    def __init__(self,name,age,employee_id,department,region):
+        super().__init__(name,age,employee_id,department)
+        self.region=region
+       
+    def display_senior_manager(self):
+            print(f"I manage {self.region}")
+                
+c=SeniorManager("Alice",20,"abc123","sales","Delhi")  # c= conclusion
+
+c.display_person()
+c.display_employee()
+c.display_manager()
+c.display_senior_manager()
+
+
+
+
