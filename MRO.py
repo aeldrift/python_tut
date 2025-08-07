@@ -34,4 +34,6 @@ class D(B, C):
 obj = D()
 obj.greet()  # expected output: Hello from B
 
+''' D → B → C → A → object
 
+Since B comes before C in the class declaration class D(B, C), Python finds the method greet() in B first and stops there. '''
