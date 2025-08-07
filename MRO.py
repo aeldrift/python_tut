@@ -37,3 +37,36 @@ obj.greet()  # expected output: Hello from B
 ''' D → B → C → A → object
 
 Since B comes before C in the class declaration class D(B, C), Python finds the method greet() in B first and stops there. '''
+
+
+# Solving Diamond Problem:
+
+class A:
+    def greet(self):
+        print("Hi from A")
+
+class B(A):
+    def greet(self):
+        print("Hi from B")
+        super().greet()
+
+class C(A):
+    def greet(self):
+        print("Hi from C")
+        super().greet()
+
+class D(B, C):
+    def greet(self):
+        print("Hi from D")
+        super().greet()
+
+obj = D()
+obj.greet()
+
+#  expected ouptput:
+''' (Diamond doesn’t break Python, MRO keeps it in line)
+
+Hi from D  
+Hi from B  
+Hi from C  
+Hi from A '''
