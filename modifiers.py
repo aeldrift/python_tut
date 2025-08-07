@@ -16,6 +16,6 @@ class Student:
     def __init__(self):
         self.college="MMDU"
 obj=Student()
-print(obj.college
+print(obj.college. # MM(DU)
 
 
