@@ -40,4 +40,13 @@ elif score == -1:
     print("You Lose")
 else:
     print("You Won")
-
+    
+# Expected output:
+''' choose you opt: 
+ 0 for Snake 
+ 1 for Water 
+ 2 for Gun
+ Choose your input: 2
+You choose: 2
+Computer choose: 0
+You Won'''
