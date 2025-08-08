@@ -14,7 +14,7 @@ print(random.randint(1,5))
 
 import random
 def check(comp,user):
-    if comp == user:   # Game conditions
+    if comp == user:
         return 0 
     if comp == 0 and user == 1:
         return -1
@@ -25,13 +25,15 @@ def check(comp,user):
         
     return 1
             
-comp=random.randint(0,2) 
+comp=random.randint(0,2)
 user= int(input("choose you opt: \n 0 for Snake \n 1 for Water \n 2 for Gun\n Choose your input: "))
-# Score Evaluation
-score=check(comp,user)
+if user not in[0,1,2]:
+    print("Invalid choice! Please choose only 0, 1, or 2.")
+else:
+    score=check(comp,user)
 
-print("You choose:", user)
-print("Computer choose:",comp)
+    print("You choose:", user)
+    print("Computer choose:",comp)
 
 
 if score == 0:
@@ -39,9 +41,9 @@ if score == 0:
 elif score == -1:
     print("You Lose")
 else:
-    print("You Won")
-    
-# Expected output:
+    print("You Won 🎉")
+
+# Expected output (as per loss and win condition opts choosen):
 ''' choose you opt: 
  0 for Snake 
  1 for Water 
@@ -49,4 +51,11 @@ else:
  Choose your input: 2
 You choose: 2
 Computer choose: 0
-You Won'''
+You Won 🎉 '''
+
+
+
+    
+
+
+
