@@ -14,7 +14,7 @@ print(random.randint(1,5))
 
 import random
 def check(comp,user):
-    if comp == user:
+    if comp == user:   # Game conditions
         return 0 
     if comp == 0 and user == 1:
         return -1
@@ -25,5 +25,19 @@ def check(comp,user):
         
     return 1
             
-comp=random.randint(0,2)
+comp=random.randint(0,2) 
 user= int(input("choose you opt: \n 0 for Snake \n 1 for Water \n 2 for Gun\n Choose your input: "))
+# Score Evaluation
+score=check(comp,user)
+
+print("You choose:", user)
+print("Computer choose:",comp)
+
+
+if score == 0:
+    print("Match Draw")
+elif score == -1:
+    print("You Lose")
+else:
+    print("You Won")
+
