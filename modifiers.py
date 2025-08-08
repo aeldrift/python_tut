@@ -50,9 +50,9 @@ d._Dog__dream()  #  Works by name mangling
 
 # ecpected output:
 
-Bruno
+'''Bruno
 happy
 i love cats
 Woof!
 Sleeping...
-Dreaming about bones...
+Dreaming about bones... '''
