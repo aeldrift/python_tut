@@ -2,7 +2,7 @@
 # Example: 
 
 class Example:
-    def instance_methods(self):
+    def instance_method(self):
         print("I'm an instance method")
     @staticmethod
     def static_method():
