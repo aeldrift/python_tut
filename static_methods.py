@@ -23,3 +23,6 @@ class TemperatureConverter:
         
 celsius=float(input("Enter Temp in celsius:", ))
 print(TemperatureConverter.Temp(celsius))
+
+# Practise Question:
+'''Create a class Calculator that has a static method called multiply which takes two numbers as input and returns their product. '''
