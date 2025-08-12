@@ -32,8 +32,8 @@ class Calculator:
     def Multiply(num1,num2):
         return num1 * num2
         
-num1=float(input("Enter 1st number:", ))
-num2=float(input("Enter 2nd number:", ))
+num1=float(input("Enter 1st number:" ))
+num2=float(input("Enter 2nd number:" ))
 
 result=Calculator.Multiply(num1,num2)
 
