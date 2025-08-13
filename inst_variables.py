@@ -1,5 +1,5 @@
 # Instance Variabkes And class variables 
-#Example:
+# Example for Instance vs class:
 
 class Car:
     def __init__(self, brand):
