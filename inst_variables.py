@@ -42,3 +42,10 @@ Employee.company = "NewCorp"  #( changed for all instances)
 print(e1.company)  # NewCorp 
 print(e2.company)  # NewCorp
 
+# To change INSTANCE ATTRIBUTE:
+
+e2.company = "BMW"  #(to change instance attribute)
+print(e2.company) # BMW
+
+
+
