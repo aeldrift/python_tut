@@ -47,5 +47,17 @@ print(e2.company)  # NewCorp
 e2.company = "BMW"  #(to change instance attribute)
 print(e2.company) # BMW
 
+# Example for Magic method/ Dunder Method/ Double underscore Method:
+
+class Book:
+    def __init__(self, title):
+        self.title = title
+    
+    def __str__(self):
+        return f"Book: {self.title}"
+
+b1 = Book("Python")
+print(b1)  # Book: Python 
+
 
 
