@@ -85,5 +85,16 @@ class Book:
 b1 = Book(350)
 print(len(b1))  # 350 
 
+# INSTANCE IS DESTROYED: 
+''' Before destruction, if you have a __del__ method (destructor), Python will call it. '''
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def __del__(self):
+        print(f"{self.name} is being destroyed")
+
+p1 = Person("Alice")
+del p1  # Calls __del__ before removing object from memory
+
 
 
