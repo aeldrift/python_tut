@@ -49,6 +49,8 @@ print(e2.company) # BMW
 
 # Example for Magic method/ Dunder Method/ Double underscore Method:
 
+# EXAMPLE WITH __str__ :
+
 class Book:
     def __init__(self, title):
         self.title = title
@@ -57,7 +59,31 @@ class Book:
         return f"Book: {self.title}"
 
 b1 = Book("Python")
-print(b1)  # Book: Python 
+print(b1)  # Book: Python
+
+# EXAMPLE WITH __len__ :
+
+class Book:
+    def __init__(self, pages):
+        self.pages = pages
+    
+    def len(self):
+        return self.pages
+
+b1 = Book(350)
+print(len(b1))  # TypeError: object of type 'Book' has no len()
+
+# But with __len__ :
+
+class Book:
+    def __init__(self, pages):
+        self.pages = pages
+    
+    def __len__(self):
+        return self.pages
+
+b1 = Book(350)
+print(len(b1))  # 350 
 
 
 
