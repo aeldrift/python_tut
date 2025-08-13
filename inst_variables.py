@@ -22,4 +22,4 @@ p1 = Person("Alice", 25)
 print(p1.name)  # Alice
 print(p1.age)   # 25
 print(p1) # <__main__.Person object at 0x15247e376cf0>
-# memory address where instance is stored.
+# 0x152....0>  is memory address where instance is stored.
