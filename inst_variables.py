@@ -23,3 +23,22 @@ print(p1.name)  # Alice
 print(p1.age)   # 25
 print(p1) # <__main__.Person object at 0x15247e376cf0>
 # 0x152....0>  is memory address where instance is stored.
+
+# Example:  Class variables vs Instance variable:
+
+class Employee:
+    company = "TechCorp"  # class variable
+
+    def __init__(self, name):
+        self.name = name  # instance variable
+
+e1 = Employee("Alice")
+e2 = Employee("Bob")
+
+print(e1.company)  # TechCorp
+print(e2.company)  # TechCorp
+
+Employee.company = "NewCorp"  #( changed for all instances)
+print(e1.company)  # NewCorp 
+print(e2.company)  # NewCorp
+
