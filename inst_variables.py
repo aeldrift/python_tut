@@ -10,3 +10,13 @@ car2 = Car("Tesla")    # Instance 2
 
 print(car1.brand)  # Toyota
 print(car2.brand)  # Tesla
+
+# Instance variable:
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name    # instance variable
+        self.age = age      # instance variable
+
+p1 = Person("Alice", 25)
+print(p1.name)  # Alice
