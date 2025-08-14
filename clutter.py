@@ -22,3 +22,9 @@ def say_goodbye(name):
 say_goodbye("Alice")
 say_goodbye("Bob")
 
+''' 2. Name Things Clearly
+Bad names = confusion. '''
+
+# Bad:
+def f(x):
+    return (x **2 )* 3.14
