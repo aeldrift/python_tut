@@ -46,3 +46,9 @@ for word in words:
         count[word] += 1
     else:
         count[word] = 1
+print(count)
+
+# Good:
+from collections import Counter
+count = Counter("hi hi hello hi".split())
+print(count)
