@@ -24,3 +24,16 @@ class Library:
 
     def get_no_of_books(self):
         return self.no_of_books
+# library instance
+my_library = Library()
+
+# Add books to the library
+my_library.add_book("1984")
+my_library.add_book("The Alchemist")
+my_library.add_book("Python Basics")
+
+# Print all books
+my_library.print_books()
+
+# Print number of books
+print("Number of books:", my_library.get_no_of_books())
