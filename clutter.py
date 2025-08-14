@@ -34,3 +34,15 @@ def calculate_area(radius):
     return (radius **2 )* 3.14
     
 print(calculate_area(5))
+
+# Use Built-in Python Features
+''' Don’t write something manually if Python already has a tool for it. '''
+
+# Bad:
+words = "hi hi hello hi".split()
+count = {}
+for word in words:
+    if word in count:
+        count[word] += 1
+    else:
+        count[word] = 1
