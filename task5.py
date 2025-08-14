@@ -37,3 +37,10 @@ my_library.print_books()
 
 # Print number of books
 print("Number of books:", my_library.get_no_of_books())
+
+# Expected output: 
+''' Books in the library:
+- 1984
+- The Alchemist
+- Python Basics
+Number of books: 3 '''
