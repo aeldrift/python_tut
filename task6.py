@@ -14,4 +14,21 @@ class LibraryBook:
             print(f"Book '{self.title}' checked out from {LibraryBook.library_name}")
         else:
             print(f"Book '{self.title}' is already checked out.")
+            
+    def return_book(self):
+        if self.is_checked_out:
+            self.is_checked_out = False
+            print(f"Book '{self.title}' returned to {LibraryBook.library_name}")
+        else:
+            print(f"Book '{self.title}' was not checked out.")
+
+# Create a book instance
+book1 = LibraryBook("1984", "Justin")
+
+# Test methods
+book1.check_out()     # Should check out the book
+book1.check_out()     # Should warn that it's already checked out
+book1.return_book()   # Should return the book
+book1.return_book()   # Should warn it wasn't checked out
+
 
