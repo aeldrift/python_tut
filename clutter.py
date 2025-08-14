@@ -28,3 +28,9 @@ Bad names = confusion. '''
 # Bad:
 def f(x):
     return (x **2 )* 3.14
+
+# Good:
+def calculate_area(radius):
+    return (radius **2 )* 3.14
+    
+print(calculate_area(5))
