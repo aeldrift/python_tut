@@ -31,4 +31,10 @@ book1.check_out()     # Should warn that it's already checked out
 book1.return_book()   # Should return the book
 book1.return_book()   # Should warn it wasn't checked out
 
+# Expected output:
+''' Book '1984' checked out from Central City Library
+Book '1984' is already checked out.
+Book '1984' returned to Central City Library
+Book '1984' was not checked out. '''
+
 
