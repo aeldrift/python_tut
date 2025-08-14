@@ -52,3 +52,12 @@ print(count)
 from collections import Counter
 count = Counter("hi hi hello hi".split())
 print(count)
+
+# 🧪 5. Practice Task: Turn it into clean, reusable code.
+
+''' name1 = "Sarah"
+name2 = "Tom"
+print("Hi " + name1)
+print("Hi " + name2)
+# More people?
+# Might need to update '''
