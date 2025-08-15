@@ -64,3 +64,7 @@ print("Hi " + name2)
 
 def greet_person(name):
     print(f"Hi {name}") 
+    
+names = ["Sarah", "Tom", "Alice", "Bob"] 
+for name in names:
+  greet_person(name)
