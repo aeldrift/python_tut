@@ -68,3 +68,9 @@ def greet_person(name):
 names = ["Sarah", "Tom", "Alice", "Bob"] 
 for name in names:
   greet_person(name)
+
+# Expected Output:
+''' Hi Sarah
+Hi Tom
+Hi Alice
+Hi Bob '''
