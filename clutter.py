@@ -61,3 +61,6 @@ print("Hi " + name1)
 print("Hi " + name2)
 # More people?
 # Might need to update '''
+
+def greet_person(name):
+    print(f"Hi {name}") 
