@@ -75,3 +75,4 @@ class My_class:
 
 a = My_class("Abas")
 a.print_name()
+
