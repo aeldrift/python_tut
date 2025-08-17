@@ -70,7 +70,8 @@ for name in names:
   greet_person(name)
 
 # Expected Output:
-''' Hi Sarah
+''' 
+Hi Sarah
 Hi Tom
 Hi Alice
 Hi Bob '''
