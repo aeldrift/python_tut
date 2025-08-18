@@ -1,5 +1,5 @@
 # rename or save files as in sequential format:
-# Example (as comment): bcz here no files module is there.
+# Example (as comment): to prevent error: module not found bcz here no files or module is there.
 '''
 import os
 
