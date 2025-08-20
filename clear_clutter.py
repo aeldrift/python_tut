@@ -36,3 +36,22 @@ You are given messy resume file names:
 Write a program to rename them as:
 1.pdf, 2.docx, 3.docx, 4.pdf '''
 
+import os
+
+folder_path = r"C:\Users\HP\Pictures\Screenshots\Clutter"
+
+files = os.listdir(folder_path)
+
+
+file_extensions = (".pdf", ".docx")
+
+target_files = [f for f in files if f.lower().endswith(file_extensions)]
+
+for idx, filename in enumerate(target_files, start=1):
+    ext = os.path.splitext(filename)[1]    
+      
+    old_path = os.path.join(folder_path, filename)
+    new_path = os.path.join(folder_path, f"{idx}{ext}")
+    os.rename(old_path, new_path)
+
+print("Files renamed successfully!")
