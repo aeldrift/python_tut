@@ -55,3 +55,9 @@ for idx, filename in enumerate(target_files, start=1):
     os.rename(old_path, new_path)
 
 print("Files renamed successfully!")
+
+# Expected Output:
+''' 1.pdf
+2.docx
+3.docx
+4.pdf '''
