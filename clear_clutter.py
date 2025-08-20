@@ -30,5 +30,8 @@ print("Files renamed successfully!")
 '''Question 1: Resume Files Cleanup
 You are given messy resume file names:
 
-["resume(John).pdf", "resume-final.docx", "resume_v2.docx", "resume2024.pdf"]
+["resume(John).pdf", "resume-final.docx", "resume_v2.docx", 
+"resume2024.pdf"]
 
+Write a program to rename them as:
+1.pdf, 2.docx, 3.docx, 4.pdf
