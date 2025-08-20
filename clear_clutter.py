@@ -34,4 +34,5 @@ You are given messy resume file names:
 "resume2024.pdf"]
 
 Write a program to rename them as:
-1.pdf, 2.docx, 3.docx, 4.pdf
+1.pdf, 2.docx, 3.docx, 4.pdf '''
+
