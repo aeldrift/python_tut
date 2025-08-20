@@ -26,3 +26,9 @@ for idx, filename in enumerate(image_files, start=1):
 
 print("Files renamed successfully!")
 '''
+# Practice Question:
+'''Question 1: Resume Files Cleanup
+You are given messy resume file names:
+
+["resume(John).pdf", "resume-final.docx", "resume_v2.docx", "resume2024.pdf"]
+
