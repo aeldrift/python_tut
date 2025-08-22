@@ -62,3 +62,9 @@ Library.updated_fees(500)
 print("Updated Late Feeper day is:", Library.late_fee)
 
 book.show_book() # shows book details.
+
+# Output:
+''' 
+The Book 'ABC' is written by Alice
+Updated Late Fee per day is: 500
+The Book 'ABC' is written by Alice'''
