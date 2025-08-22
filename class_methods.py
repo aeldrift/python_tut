@@ -30,4 +30,8 @@ acc1.deposit(200)  # Works only for Alice
 acc2.deposit(100)  # Works only for Bob
 
 # Practice Question:
-''' 
+''' Create a class Library where:
+1. Each book has a title and author → that belongs to an instance.
+2. The library has a shared rule: the late fee per day (same for all books).
+3. Write: An instance method show_book() that prints the book’s title and author.
+A class method change_late_fee() that changes the late fee for all books.'''
