@@ -28,3 +28,6 @@ acc2 = BankAccount("Bob", 500)
 
 acc1.deposit(200)  # Works only for Alice
 acc2.deposit(100)  # Works only for Bob
+
+# Practice Question:
+''' 
