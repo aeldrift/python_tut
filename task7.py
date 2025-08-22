@@ -53,3 +53,12 @@ print("Fine:", book1.calculate_fine())
 
 # Update fee
 #Library.update_fee(20)
+
+# Example Output: 
+''' The Book 'ABC' is written by Alice
+Issued on: 2025-05-26
+Today's date: 2025-08-22
+Due date: 2025-06-25
+Overdue days: 58
+Late fee per day: 10
+Fine: 580 '''
