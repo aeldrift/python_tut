@@ -95,6 +95,3 @@ class Person:
 
 p1 = Person("Alice")
 del p1  # Calls __del__ before removing object from memory
-
-
-
