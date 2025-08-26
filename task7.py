@@ -54,7 +54,8 @@ print("Fine:", book1.calculate_fine())
 # Update fee
 #Library.update_fee(20)
 
-# Example Output: 
+# Output: (It can vary as per random no taken)
+
 ''' The Book 'ABC' is written by Alice
 Issued on: 2025-05-26
 Today's date: 2025-08-22
