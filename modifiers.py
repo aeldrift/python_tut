@@ -40,7 +40,7 @@ print(d.name)       #  Public - works fine
 print(d._mood)      #  Protected - works, but be careful
 # print(d.__secret) #  rivate - will give an error
 
-# 🕵️ But you CAN access it like this (not recommended):
+#  But you CAN access it like this (not recommended):
 print(d._Dog__secret)  # Works, but looks weird
 
 d.bark()         #  Public method
