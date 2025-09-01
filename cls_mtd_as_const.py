@@ -25,6 +25,7 @@ class Employee:
     def __init__(self, post, salary):
         self.post = post
         self.salary = salary
+# or can convert salary into integer value also using [int(salary)]
 
     @classmethod
     def Manager(cls, post):          # class method as alternative constructor
@@ -59,5 +60,5 @@ print(e1.name)
 print(e1.salary)
 # output: 
 ''' John
-    12000. '''
+    12000  '''
 
