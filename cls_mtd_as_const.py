@@ -35,3 +35,12 @@ e1 = Employee.Manager("Manager1,")
 
 print(e1.post, e1.salary)
 # output: Manager1, 8000
+
+# split use:
+'''
+a= " Harry-12-python"
+a.split("-")
+output: ['Harry','12','12000']  '''
+
+
+
