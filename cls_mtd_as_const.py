@@ -57,3 +57,7 @@ e1 = Employee.fromstr(string)
 
 print(e1.name)
 print(e1.salary)
+# output: 
+''' John
+    12000. '''
+
