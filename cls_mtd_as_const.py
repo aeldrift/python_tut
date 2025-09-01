@@ -20,3 +20,17 @@ print(e2.name, e2.salary)  # Bob 5000
 # Quick check for you:
 ''' If you wanted a constructor for managers, where the salary is always 80000,
 how would you write that class method inside Employee?  '''
+
+class Employee:
+    def __init__(self, post, salary):
+        self.post = post
+        self.salary = salary
+
+    @classmethod
+    def Manager(cls, post):          # class method as alternative constructor
+        return cls(post, 80000)      # create object with fixed salary
+
+# create object using class method
+e1 = Employee.Manager("Manager1,")
+
+print(e1.post, e1.salary)
