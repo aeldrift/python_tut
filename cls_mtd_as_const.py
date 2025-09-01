@@ -16,3 +16,7 @@ e2 = Employee.intern("Bob")
 print(e1.name, e1.salary)  # Alice 40000
 print(e2.name, e2.salary)  # Bob 5000
 
+
+# Quick check for you:
+''' If you wanted a constructor for managers, where the salary is always 80000,
+how would you write that class method inside Employee?  '''
