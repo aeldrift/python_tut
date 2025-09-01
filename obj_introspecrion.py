@@ -29,3 +29,4 @@ print(p.__dict__)
 #3. help(obj)	Documentation/help info 
 # example:
 
+print(help(Person))
