@@ -13,5 +13,6 @@ e1 = Employee("Alice", 40000)
 # class method used as constructor 
 e2 = Employee.intern("Bob")
 
-print(e1.name, e1.salary)
-print(e2.name, e2.salary)
+print(e1.name, e1.salary)  # Alice 40000
+print(e2.name, e2.salary)  # Bob 5000
+
