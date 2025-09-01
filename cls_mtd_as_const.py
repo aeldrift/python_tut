@@ -44,3 +44,16 @@ output: ['Harry','12','12000']  '''
 
 # Example using split fir string format data:
 
+class Employee:
+    def __init__(self, name, salary):   
+        self.name = name
+        self.salary = salary     
+@classmethod  
+    def fromstr(cls, name):            
+        return cls(name.split("-")[0], name.split("-")[1])  # use parameter nname
+
+string = "John-12000"
+e1 = Employee.fromstr(string)          
+
+print(e1.name)
+print(e1.salary)
