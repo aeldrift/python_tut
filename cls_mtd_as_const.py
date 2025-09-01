@@ -42,5 +42,5 @@ a= " Harry-12-python"
 a.split("-")
 output: ['Harry','12','12000']  '''
 
-
+# Example using split fir string format data:
 
