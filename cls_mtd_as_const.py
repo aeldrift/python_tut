@@ -10,6 +10,8 @@ class Employee:
 # Regular Constructor 
 e1 = Employee("Alice", 40000)
 
+
+
 # class method used as constructor 
 e2 = Employee.intern("Bob")
 
