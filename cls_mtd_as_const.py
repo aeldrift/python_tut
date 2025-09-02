@@ -37,6 +37,7 @@ e1 = Employee.Manager("Manager1,")
 print(e1.post, e1.salary)
 # output: Manager1, 8000
 
+
 # split use:
 '''
 a= " Harry-12-python"
@@ -61,4 +62,5 @@ print(e1.salary)
 # output: 
 ''' John
     12000  '''
+
 
