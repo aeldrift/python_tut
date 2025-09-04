@@ -13,3 +13,14 @@ class Child(Parent):
         print("I am a child class")
 obj = Child()
 obj.show()  # Output: I am a child class (method override)
+
+
+# If the method is not found in the subclass, Python looks for it in the parent class.
+# Example:
+class A:
+    def display(self):
+        print("Class A method")
+class B(A):
+    pass
+obj = B()
+obj.display()  # Output: Class A method (inherited from parent class)
