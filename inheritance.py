@@ -242,3 +242,30 @@ b.message()      # From Parent
 b.message_b()    # From ChildB
 
 
+# HIERARCHICAL INHERITANCE 
+
+# Example:
+
+class A:
+    def show_a(self):
+        print("Class A")
+
+class B(A):
+    def show_b(self):
+        print("Class B")
+
+class C(A):
+    def show_c(self):
+        print("Class C")
+
+class D(B, C):
+    def show_d(self):
+        print("Class D")
+
+obj = D()
+obj.show_a()  # From class A
+obj.show_b()  # From class B
+obj.show_c()  # From class C
+obj.show_d()  # From class D
+
+

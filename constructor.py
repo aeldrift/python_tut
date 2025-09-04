@@ -63,3 +63,17 @@ rectangle1 = Rectangle(50, 20)
 # Printing results
 print("Area:", rectangle1.area())
 print("Perimeter:", rectangle1.perimeter())
+
+# Practice question: Create a constructor to print name using print_name method.
+
+class My_class:
+    def __init__(self, name):
+        self.name = name
+
+    def print_name(self):
+        print(f"Name is {self.name}")
+
+a = My_class("Abas")
+a.print_name()
+
+# Output: Name is Abas
