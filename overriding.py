@@ -28,11 +28,30 @@ obj.display()  # Output: Class A method (inherited from parent class)
 
 # Some imp operations using issubclass() function:
 
-# issuperclass(): Returns True if class1 is a superclass of class2
-print(issuperclass(B, (A, object)))  # True, because B is a subclass of A and object.
-
-
 # issubclass(): Returns True if class1 is a subclass of class2
 print(issubclass(A, B))  # False, because A is not a subclass of B
 print(issubclass(B, A))  # True, because B is a subclass of A
 print(issubclass(B, object))  # True, because all classes inherit from object
+
+
+
+# At runtime, @override does nothing — but it helps catch mistakes early during static analysis.
+# This is only for static type checkers (like mypy, pyright), not for runtime.
+
+# Example:
+from typing import override
+
+class Animal:
+    def sound(self) -> None:
+        print("Animal's sound")
+
+class Dog(Animal):
+    @override
+    def sound(self) -> None:   # correct override
+        super().sound()
+        print("Bark")  # The -> None indicates the return type of the function.
+                       # None means the function does not return anything (or returns None implicitly).
+
+d = Dog()
+d.sound()  # Animal's sound 
+           # Bark
