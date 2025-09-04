@@ -25,6 +25,14 @@ class B(A):
 obj = B()
 obj.display()  # Output: Class A method (inherited from parent class)
 
+
 # Some imp operations using issubclass() function:
+
 # issuperclass(): Returns True if class1 is a superclass of class2
 print(issuperclass(B, (A, object)))  # True, because B is a subclass of A and object.
+
+
+# issubclass(): Returns True if class1 is a subclass of class2
+print(issubclass(A, B))  # False, because A is not a subclass of B
+print(issubclass(B, A))  # True, because B is a subclass of A
+print(issubclass(B, object))  # True, because all classes inherit from object
