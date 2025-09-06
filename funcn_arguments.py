@@ -45,3 +45,4 @@ def average(*numbers):
     return sum/len(numbers)  # returning the average value
 result=average(2,4,6,8,10)
 print(result)  # prints the returned value
+
