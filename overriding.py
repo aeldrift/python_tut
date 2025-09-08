@@ -76,3 +76,6 @@ class Cat(Animal):
 # Demonstration
 a = Animal()
 a.sound()   # Output: Animals make different sounds
+
+d = Dog()
+d.sound()   # Output: Dog barks: Woof! Woof!
