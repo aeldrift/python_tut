@@ -55,3 +55,10 @@ class Dog(Animal):
 d = Dog()
 d.sound()  # Animal's sound 
            # Bark
+
+# Example:
+
+# Parent class
+class Animal:
+    def sound(self):
+        print("Animals make different sounds")
