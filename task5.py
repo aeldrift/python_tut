@@ -1,46 +1,40 @@
-# PRACTISE QUESTION
+# practice Question : Make a libray Management System for the books being checkout out or not.
 
-''' Write a library class with no_of_books and books as two instance variables.  
-write a program to create a library from this library class and show you can 
-print all books, add a bookand get a number of books using different methods. 
-Show that your program dosen't presist the books after the program is stopped! '''
+class LibraryBook:
+    library_name = "Central City Library"
 
-class Library:
-    def __init__(self):
-        self.books = []  # List to store book names
-        self.no_of_books = 0  # Count of books
+    def __init__(self, title, author, is_checked_out=False):
+        self.title = title
+        self.author = author
+        self.is_checked_out = is_checked_out
 
-    def add_book(self, book_name):
-        self.books.append(book_name)
-        self.no_of_books += 1
-
-    def print_books(self):
-        if self.books:
-            print("Books in the library:")
-            for book in self.books:
-                print(f"- {book}")
+    def check_out(self):
+        if not self.is_checked_out:
+            self.is_checked_out = True
+            print(f"Book '{self.title}' checked out from {LibraryBook.library_name}")
         else:
-            print("No books in the library.")
+            print(f"Book '{self.title}' is already checked out.")
+            
+    def return_book(self):
+        if self.is_checked_out:
+            self.is_checked_out = False
+            print(f"Book '{self.title}' returned to {LibraryBook.library_name}")
+        else:
+            print(f"Book '{self.title}' was not checked out.")
 
-    def get_no_of_books(self):
-        return self.no_of_books
-# library instance
-my_library = Library()
+# Create a book instance
+book1 = LibraryBook("1984", "Justin")
 
-# Add books to the library
-my_library.add_book("1984")
-my_library.add_book("The Alchemist")
-my_library.add_book("Python Basics")
+# Test methods
+book1.check_out()     # Should check out the book
+book1.check_out()     # Should warn that it's already checked out
+book1.return_book()   # Should return the book
+book1.return_book()   # Should warn it wasn't checked out
 
-# Print all books
-my_library.print_books()
+# Expected output:
+''' Book '1984' checked out from Central City Library
+Book '1984' is already checked out.
+Book '1984' returned to Central City Library
+Book '1984' was not checked out. '''
 
-# Print number of books
-print("Number of books:", my_library.get_no_of_books())
 
-# Expected output: 
-''' Books in the library:
-- 1984
-- The Alchemist
-- Python Basics
-Number of books: 3 '''  

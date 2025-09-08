@@ -1,40 +1,66 @@
-# practice Question : Make a libray Management System for the books being checkout out or not.
+# Practice Question:
 
-class LibraryBook:
-    library_name = "Central City Library"
+''' OOP + Practical
+“Design a Python class to represent a library book system where each book has a title, author, issue date, and due date. The system should also calculate fines for overdue books. '''
 
-    def __init__(self, title, author, is_checked_out=False):
+import random
+from datetime import date, timedelta
+
+class Library:
+    late_fee = 10   # fee per day after due date (integer)
+
+    def __init__(self, title, author, random_issue=False):
         self.title = title
         self.author = author
-        self.is_checked_out = is_checked_out
 
-    def check_out(self):
-        if not self.is_checked_out:
-            self.is_checked_out = True
-            print(f"Book '{self.title}' checked out from {LibraryBook.library_name}")
+        if random_issue:  # pick a random date in the last 100 days
+            days_ago = random.randint(1, 100)
+            self.issue_date = date.today() - timedelta(days=days_ago)
         else:
-            print(f"Book '{self.title}' is already checked out.")
-            
-    def return_book(self):
-        if self.is_checked_out:
-            self.is_checked_out = False
-            print(f"Book '{self.title}' returned to {LibraryBook.library_name}")
+            self.issue_date = date.today()
+
+        self.due_date = self.issue_date + timedelta(days=30)
+
+    def show_book(self):
+        print(f"The Book '{self.title}' is written by {self.author}")
+        print(f"Issued on: {self.issue_date}")
+        
+
+    def calculate_fine(self):
+        today = date.today()
+        print("Today's date:", today)
+        print("Due date:", self.due_date)
+
+        if today > self.due_date:
+            overdue_days = (today - self.due_date).days
+            fine = overdue_days * Library.late_fee
+            print("Overdue days:", overdue_days)
+            print("Late fee per day:", Library.late_fee)
+            return fine
         else:
-            print(f"Book '{self.title}' was not checked out.")
+            print("No fine, still within due date.")
+            return 0
 
-# Create a book instance
-book1 = LibraryBook("1984", "Justin")
+#   @classmethod
+#    def update_fee(cls, new_fee):
+#       cls.late_fee = new_fee
 
-# Test methods
-book1.check_out()     # Should check out the book
-book1.check_out()     # Should warn that it's already checked out
-book1.return_book()   # Should return the book
-book1.return_book()   # Should warn it wasn't checked out
 
-# Expected output:
-''' Book '1984' checked out from Central City Library
-Book '1984' is already checked out.
-Book '1984' returned to Central City Library
-Book '1984' was not checked out. '''
+# Example with random issue date
+book1 = Library("ABC", "Alice", random_issue=True)
+book1.show_book()
+print("Fine:", book1.calculate_fine())
 
+# Update fee
+#Library.update_fee(20)
+
+# Output: (It can vary as per random no taken)
+
+''' The Book 'ABC' is written by Alice
+Issued on: 2025-05-26
+Today's date: 2025-08-22
+Due date: 2025-06-25
+Overdue days: 58
+Late fee per day: 10
+Fine: 580 '''
 
