@@ -67,3 +67,11 @@ class Animal:
 class Dog(Animal):
     def sound(self):
         print("Dog barks: Woof! Woof!")
+
+# Another child class (overrides sound())
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows: Meow! Meow!")
+
+# Demonstration
+
