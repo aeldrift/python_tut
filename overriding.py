@@ -80,3 +80,5 @@ a.sound()   # Output: Animals make different sounds
 d = Dog()
 d.sound()   # Output: Dog barks: Woof! Woof!
 
+c = Cat()
+c.sound()   # Output: Cat meows: Meow! Meow!
