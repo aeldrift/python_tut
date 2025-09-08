@@ -62,4 +62,8 @@ d.sound()  # Animal's sound
 class Animal:
     def sound(self):
         print("Animals make different sounds")
-        
+
+# Child class (overrides sound())
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks: Woof! Woof!")
