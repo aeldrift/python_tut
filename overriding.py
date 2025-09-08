@@ -74,4 +74,5 @@ class Cat(Animal):
         print("Cat meows: Meow! Meow!")
 
 # Demonstration
-
+a = Animal()
+a.sound()   # Output: Animals make different sounds
