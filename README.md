@@ -19,3 +19,19 @@ This repo includes practice for:
 - Logic and problem solving
 
 Each file focuses on a specific Python topic with examples and practice code.
+
+
+## 🗂 Repository Structure
+
+\python_tut/
+│── basics.py
+│── variables.py
+│── input_output.py
+│── conditions.py
+│── loops.py
+│── functions.py
+│── lists.py
+│── dictionaries.py
+│── sets_tuples.py
+│── strings.py
+│── practice_examples.py
